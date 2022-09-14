@@ -19,7 +19,7 @@ function Login() {
   const saveData = async () => {
 
     try {
-      let res = await axios.post(process.env.BASE_URL+'/register',userData,{
+      let res = await axios.post(process.env.REACT_APP_BASE_URL+'/register',userData,{
         headers:{
           "Content-Type": 'application/json'
         },

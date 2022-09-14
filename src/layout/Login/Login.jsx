@@ -12,9 +12,9 @@ function Login() {
 
   const submitData=async()=>{
     try {
-      let res =await axios.post(process.env.BASE_URL,{email,password},{
+      let res =await axios.post(process.env.REACT_APP_BASE_URL+'/login',{email,password},{
         headers:{
-          'Content-Type':'application/json'
+          'Content-Type':'application/json',
         },
         
        });
@@ -24,7 +24,7 @@ function Login() {
        }
        console.log(res.data,'res of login')
     } catch (err) {
-      console.log(err.response.data,'error occure');
+      console.log(err,'error occur');
     }
   
   }
